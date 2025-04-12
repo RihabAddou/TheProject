@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIMS-Encadrant</title>
+    <link rel="stylesheet" href="Encad-interface.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <a href="Encad-interface.html"
+        ><div class="logo"><img src="HIMS-removebg-preview.png" alt="" /></div
+      ></a>
+
+      <div class="profile-container">
+        <a href="">
+          <i class="fa-solid fa-bell fa-xl" style="color: #000000"></i>
+        </a>
+        <img
+          src="Encadrantd.jpg"
+          alt="Profile"
+          class="profile-img"
+          id="profileToggle"
+        />
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="Page1.html">Se déconnecter</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <h3>H I M S</h3>
+      <ul>
+        <li>Profile</li>
+        <li>Consultations Stagiaires</li>
+      </ul>
+    </div>
+    <!--Dans cette partie le script JS de boutton se deconnecter :)-->
+    <script>
+      const profileToggle = document.getElementById("profileToggle"); // declaration par id de l'image
+      const dropdownMenu = document.getElementById("dropdownMenu"); // meme chose pour le dropmenu de se deconnecter
+
+      profileToggle.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("show");
+      });
+
+      window.addEventListener("click", (e) => {
+        if (
+          !profileToggle.contains(e.target) &&
+          !dropdownMenu.contains(e.target)
+        ) {
+          dropdownMenu.classList.remove("show");
+        }
+      });
+    </script>
+    <!-- finish :)-->
+
+    <!--Html de la barre de chat-->
+    <div class="floating-bar" id="floatingBar">
+      <button id="toggleButton" class="toggle-button">
+        <i class="fa-solid fa-message" style="color: #ffffff"></i>
+        Chat En Temps Reel
+      </button>
+    </div>
+
+    <div class="sliding-content" id="slidingContent">
+      <div class="content-header">
+        <span>Chat</span>
+        <button id="closeButton" class="close-button">X</button>
+      </div>
+      <div class="content-body">
+        <p><!--par PHP--></p>
+      </div>
+    </div>
+
+    <!-- script JS de chat :)-->
+    <script>
+      const toggleButton = document.getElementById("toggleButton");
+      const slidingContent = document.getElementById("slidingContent");
+      const closeButton = document.getElementById("closeButton");
+      const floatingBar = document.getElementById("floatingBar");
+
+      toggleButton.addEventListener("click", () => {
+        slidingContent.classList.toggle("show");
+      });
+
+      closeButton.addEventListener("click", () => {
+        slidingContent.classList.remove("show");
+      });
+    </script>
+    <!--finish-->
+  </body>
+</html>

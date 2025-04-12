@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  background-image: url("Background2.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  opacity: 90%;
+  background: linear-gradient(135deg);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-hims {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.colored-letters .h {
+  color: #355873;
+}
+
+.colored-letters .i {
+  color: #3d9766;
+}
+
+.colored-letters .m {
+  color: #30ab9d;
+}
+
+.colored-letters .s {
+  color: #0f2133;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 80%;
+}
+
+.subtitle .h {
+  color: #355873;
+}
+
+.subtitle .i {
+  color: #3d9766;
+}
+
+.subtitle .m {
+  color: #30ab9d;
+}
+
+.vous-etes {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.role-selection {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.role-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+.role-img {
+  width: 150px;
+  height: 150px;
+  background-color: #eee;
+  margin-bottom: 10px;
+}
+
+.role-card button {
+  padding: 10px 20px;
+  background-color: #e6f7ff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.role-card button:hover {
+  background-color: #cceeff;
+}
+button {
+  font-weight: bold;
+}
